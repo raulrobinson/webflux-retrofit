@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "webflux-retrofit",
+    "description": "API para consumir datos de tipos de aeronaves desde un servicio externo",
+    "version": "0.0.1-SNAPSHOT"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8083",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Aircraft API",
+      "description": "Operaciones relacionadas con aeronaves"
+    }
+  ],
+  "paths": {
+    "/webflux-retrofit/v1/aircraft/types": {
+      "get": {
+        "tags": [
+          "Aircraft API"
+        ],
+        "summary": "Obtener tipos de aeronaves",
+        "description": "Obtiene una lista de tipos de aeronaves desde un servicio externo.",
+        "operationId": "getAircraftTypes",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webflux-retrofit/v1/aircraft/airports": {
+      "get": {
+        "tags": [
+          "Aircraft API"
+        ],
+        "summary": "Obtener aeropuertos",
+        "description": "Obtiene una lista de aeropuertos desde un servicio externo.",
+        "operationId": "getAirports",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+
+  }
+}
